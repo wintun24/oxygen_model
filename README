@@ -1,0 +1,5 @@
+Run TREESHIFTIMPORT.m. This is to extract the nodes and branches data from original file and write into text file. [INPUT files: vessels.exelem, vessels.exnode, radius.exelem][OUTPUT files: CoorOfBrelement_whole.txt, NodeOfBrelement_whole.txt, Radius_whole.txt]
+Run TerminaBr.py to look for the terminal branch and terminal block. [INPUT files: CoorOfBrelement_whole.txt, NodeOfBrelement_whole.txt], [OUTPUT files: terminal_block_whole.txt]
+Run peripheral1.py to correct the vol of peripheral mesh element that are not the whole cube. [OUTPUT files: Corrected_Vol.txt]
+Run Conductivity_V7.py to calculate the conducitvity and porosity [INPUT files: NodeOfBrelement_whole.txt, 'CoorOfBrelement_whole.txt','Radius_whole.txt','terminal_block_whole.txt,'Coorected_Vol.txt'), [OUTPUT files: ConductivityEachNode.exnode, PorosityEachNode.exnode. ConductivityEachEl_2ndsmooth.txt, PorosityEachEl_2ndsmooth.txt]
+
